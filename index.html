@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('c9c707df5721a2d304896990f69c971b');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '에코델타시티 반도 아이비플래닛',
+        description: '82실 분양',
+        imageUrl:
+          'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA3MDdfMTI4%2FMDAxNjg4Njk1MTUxMDk0.R66uQJDjAbNLYH2U-Cpv581Vz56fGfEheWAtnhq5QUsg.AOMPU85D5lG1qdXTv9Wcv4LoH5hBdSLj_PI8x5JW_Vkg.JPEG.moradong4989%2F%25B9%25DD%25B5%25B5%25BE%25C6%25C0%25CC%25BA%25F1%25C7%25C3%25B7%25A1%25B4%25D6.jpg&type=a340',
+        link: {
+          mobileWebUrl: 'https://naver.me/F3OnHSxx',
+          webUrl: 'https://naver.me/F3OnHSxx',
+        },
+      },
+      buttons: [
+        {
+          title: '접수하러가기',
+          link: {
+            mobileWebUrl: 'https://naver.me/F3OnHSxx',
+            webUrl: 'https://naver.me/F3OnHSxx',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
